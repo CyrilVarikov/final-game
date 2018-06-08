@@ -1,48 +1,44 @@
 import React, { Component } from 'react';
 
+import ChooseHero from './ChooseHero.jsx';
+
 export default class Registration extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			name: '',
-			password: ''
+			hidden: false
 		};
 
-		this.onChangeName = this.onChangeName.bind(this);
-		this.onChangePassword = this.onChangePassword.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	handleSubmit(event) {
 		event.preventDefault();
-		alert('Name: ' + this.state.name + ', Pass: ' + this.state.password);
-	}
+		let name = this.refs.name.value;
+		let password = this.refs.password.value;
 
-	onChangeName(event) {
-		let value = event.target.value;
 		this.setState({
-			name: value
-		});
-	}
-
-	onChangePassword(event) {
-		let value = event.target.value;
-		this.setState({
-			password: value
+			hidden: true
 		});
 	}
 
 	render() {
-		return (
-			<form onSubmit = {this.handleSubmit}>
-				<label>Name</label><br/>
-				<input type="text" value={this.state.name} onChange={this.onChangeName}/><br/>
-
-				<label>Password</label><br/>
-				<input type="password" value={this.state.password} onChange={this.onChangePassword}/><br/>
-
-				<input type="submit" value="Registration"/>
-			</form>
-		);
+		if (!this.state.hidden) {
+			return (
+				<form onSubmit = {this.handleSubmit}>
+					<label>Name</label><br/>
+					<input type="text" ref="name"/><br/>
+	
+					<label>Password</label><br/>
+					<input type="password" ref="password"/><br/>
+	
+					<input type="submit" value="Registration"/>
+				</form>
+			);
+		} else {
+			return (
+				<ChooseHero />
+			);
+		}
 	}
 }
