@@ -5,6 +5,13 @@
 }
 
 
+div{
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    align-items: flex-start;
+}
+
 form{
     background: rgb(219, 95, 95);
     margin: 0 auto;

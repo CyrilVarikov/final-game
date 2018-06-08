@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ChooseHero from './ChooseHero.jsx';
+import Animation from './AnimationCanvas.jsx';
+
 import '../css/registration.css';
 
 export default class Registration extends Component {
@@ -25,15 +27,19 @@ export default class Registration extends Component {
 	render() {
 		if (!this.state.hidden) {
 			return (
-				<form onSubmit = {this.handleSubmit}>
-					<label>Name</label><br/>
-					<input type="text" ref="name"/><br/>
-	
-					<label>Password</label><br/>
-					<input type="password" ref="password"/><br/>
-	
-					<input type="submit" value="Registration"/>
-				</form>
+				<div>
+					<form onSubmit = {this.handleSubmit}>
+						<label>Name</label><br/>
+						<input type="text" ref="name"/><br/>
+		
+						<label>Password</label><br/>
+						<input type="password" ref="password"/><br/>
+		
+						<input type="submit" value="Registration"/>
+					</form>
+					<Animation />
+				</div>
+				
 			);
 		} else {
 			return (
