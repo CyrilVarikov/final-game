@@ -1,9 +1,21 @@
-import {render} from 'react-dom';
-import React from 'react';
+import { render } from 'react-dom';
+import React, { Component } from 'react';
 
-import Game from './components/Game.jsx';
+import Registration from './components/Registration.jsx';
+import ChooseHero from './components/Choose_hero.jsx';
+
+class App extends Component {
+	render() {
+		return (
+			<div>
+				<Registration />
+				<ChooseHero />
+			</div>
+		);
+	}
+}
 
 render(
-	<Game />,
+	<App />,
 	document.getElementById("app")
 );
