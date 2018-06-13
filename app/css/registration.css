@@ -1,16 +1,48 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+#app {
+    background: url('../images/bg.jpg') no-repeat center center;
 }
 
-
-form{
-    background: rgb(219, 95, 95);
-    margin: 0 auto;
+form {
     width: 300px;
+    margin: auto;
 }
 
-body{
-    background: rgb(163, 190, 187);
+form input {
+    margin-bottom: 20px;
+    width: 250px;
+    height: 35px;
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    font-style: italic;
+    border-radius: 5px;
+    border: 2px solid rgb(168, 168, 168);
+    padding-left: 5px;
+}
+
+form input:focus {
+    outline: none;
+    border: 2px solid rgb(10, 42, 68);
+}
+
+input[type='submit'] {
+    border: none;
+    outline: none;
+    width: 160px;
+    height: 40px;
+    font-size: 22px;
+    background: rgb(16, 110, 56);
+    color: #fff;
+    font-style: normal;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+input[type='submit']:focus {
+    border: none;
+}
+
+input[type='submit']:hover {
+    background: rgb(10, 42, 68);
 }
