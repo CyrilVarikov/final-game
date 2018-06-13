@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+	mode: "development",
 	entry: "./app/app.jsx",
 	output:{
 		path: path.resolve(__dirname, './public'),
@@ -14,7 +15,7 @@ module.exports = {
 				exclude: /(node_modules)/,
 				loader: "babel-loader",
 				options:{
-					presets:["env", "react"]
+					presets:["env", "react", "es2015", "stage-0"]
 				}
 			},
 			{
