@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ChooseHero from './ChooseHero.jsx';
-
 import '../css/registration.css';
 
 export default class Registration extends Component {
