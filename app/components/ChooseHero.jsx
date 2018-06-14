@@ -5,9 +5,11 @@ import rambo from '../images/hero1.png';
 import mage from '../images/hero2.png';
 import hedgehog from '../images/hero3.png';
 
-import Hero1 from './Hero1.jsx';
-import Hero2 from './Hero2.jsx';
-import Hero3 from './Hero3.jsx';
+import RamboInfo from './ForInfoAboutHero/RamboInfo.jsx';
+import WizzardInfo from './ForInfoAboutHero/WizzardInfo.jsx';
+import HedgehogInfo from './ForInfoAboutHero/HedgehogInfo.jsx';
+import Headline from './Headline.jsx';
+import ImgCaption from './ImgCaption.jsx';
 
 export default class ChooseHero extends Component {
 	constructor(props) {
@@ -36,16 +38,26 @@ export default class ChooseHero extends Component {
 	}
 
 	render() {
-		if (this.state.handleHero1) return <Hero1 />;
-		if (this.state.handleHero2) return <Hero2 />;
-		if (this.state.handleHero3) return <Hero3 />;
+		if (this.state.handleHero1) return <RamboInfo />;
+		if (this.state.handleHero2) return <WizzardInfo />;
+		if (this.state.handleHero3) return <HedgehogInfo />;
 
 		return (
 			<div className='choosehero app'>
-				<figure>
-					<img src={rambo} className='rambo' onClick={this.handleHero1}/>
-					<img src={mage} className='mage' onClick={this.handleHero2}/>
-					<img src={hedgehog} className='hedgehog' onClick={this.handleHero3}/>
+				<Headline caption='Choose your hero'/>
+				<figure className='characters'>
+					<section>
+						<ImgCaption name='Rambo'/>
+						<img src={rambo} className='rambo' onClick={this.handleHero1}/>
+					</section>
+					<section>
+						<ImgCaption name='Wizzard'/>
+						<img src={mage} className='wizzard' onClick={this.handleHero2}/>
+					</section>
+					<section>
+						<ImgCaption name='Hedgehog'/>
+						<img src={hedgehog} className='hedgehog' onClick={this.handleHero3}/>
+					</section>
 				</figure>
 			</div>
 		);

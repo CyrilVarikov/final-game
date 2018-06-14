@@ -1,0 +1,44 @@
+.article{
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid rgb(16, 110, 56);
+    border-radius: 5px;
+}
+
+.figImg img{
+    padding-top: 20px;
+    height: 50px;
+    width: 70px;
+}
+
+.article p{
+    width: 300px;
+}
+
+.aboutHero{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttonWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: none;
+    justify-content: space-between;
+    width: 800px;
+}
+
+
+figcaption{
+    font-family: "Exo-Regular";
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(22, 141, 73);
+}

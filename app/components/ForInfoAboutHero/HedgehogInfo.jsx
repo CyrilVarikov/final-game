@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import '../css/choosehero.css';
+import '../../css/choosehero.css';
 
-import rambo from '../images/hero1.png';
+// import hedgehog from '../images/hero3.png';
 
-export default class Hero1 extends Component {
+export default class Hero3 extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -12,7 +12,7 @@ export default class Hero1 extends Component {
 		return(
 			<div className='choosehero app'>
 				<figure>
-					<img src={rambo} className='rambo'/>
+					<img src={hedgehog} className='hedgehog'/>
 				</figure>
 			</div>
 		);

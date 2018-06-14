@@ -25,7 +25,7 @@ form input:focus {
     border: 2px solid rgb(10, 42, 68);
 }
 
-input[type='submit'] {
+.button {
     border: none;
     outline: none;
     width: 160px;
@@ -39,10 +39,10 @@ input[type='submit'] {
     transition: all .4s;
 }
 
-input[type='submit']:focus {
+.button:focus {
     border: none;
 }
 
-input[type='submit']:hover {
+.button:hover {
     background: rgb(10, 42, 68);
 }

@@ -1,16 +1,56 @@
+
+@font-face { 
+    font-family: "Exo"; 
+    src: local("Exo"), url('../fonts/Exo-SemiBold.ttf'); 
+} 
+
+@font-face { 
+    font-family: "Exo-Regular"; 
+    src: local("Exo-Regular"), url('../fonts/Exo-Regular.ttf'); 
+} 
+
+
+
 .choosehero{
     background: #fff;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-figure {
+.characters{
     height: 130px;
-    margin: auto;
+    margin: 100px 0;
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
 }
 
-figure img {
+.characters img {
     height: 130px;
-    margin-left: 70px;
-    margin-right: 70px;
+    /* margin: 0 70px; */
     cursor: pointer;
+}
+
+h1{
+    font-family: "Exo";
+    color: rgb(16, 110, 56);
+    font-size: 50px;
+    margin: 20px auto;
+}
+
+section{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.wizzard{
+    padding-left: 20px;
+}
+
+h2{
+    font-family: "Exo-Regular";
+    font-size: 20px;
+    color: rgb(22, 141, 73);
 }
