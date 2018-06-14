@@ -32,6 +32,10 @@
     cursor: pointer;
 }
 
+.characters img:hover{
+    opacity: 0.8;
+}
+
 h1{
     font-family: "Exo";
     color: rgb(16, 110, 56);

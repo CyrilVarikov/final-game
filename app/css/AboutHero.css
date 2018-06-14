@@ -9,15 +9,20 @@
     border-radius: 5px;
 }
 
+.figImg figcaption{
+    text-align: center;
+
+}
+
 .figImg img{
     padding-top: 20px;
-    height: 50px;
-    width: 70px;
+    height: 60px;
 }
 
 .article p{
     width: 300px;
 }
+
 
 .aboutHero{
     background: #fff;
@@ -41,4 +46,12 @@ figcaption{
     font-size: 20px;
     font-weight: bold;
     color: rgb(22, 141, 73);
+}
+
+.forWizzardImgs{
+    margin-left: 20px;
+}
+
+.allign{
+    padding-left: 30px;
 }

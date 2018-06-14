@@ -9,12 +9,12 @@ export default function Article(props){
             <P text={props.text}/>
             <figure className='figImg'>
                 <figcaption>Weapon/Skills</figcaption>
-                <img src={props.firstSkill} alt="FirstGun"/>
-                <img src={props.secondSkill} alt="SecondGun"/>
+                <img src={props.firstSkill} className={props.class} alt="FirstGun"/>
+                <img src={props.secondSkill} className={props.class} alt="SecondGun"/>
             </figure>
-            <figure>
+            <figure >
                 <figcaption>Appearance</figcaption>
-                <img src={props.hero} className='rambo'/>
+                <img src={props.hero} className={props.class}/>
             </figure>
         </article>
     );

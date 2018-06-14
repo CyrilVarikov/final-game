@@ -1,19 +1,44 @@
 import React, { Component } from 'react';
-import '../../css/choosehero.css';
+import ChooseHero from '../ChooseHero.jsx';
+import '../../css/AboutHero.css';
 
-// import hedgehog from '../images/hero3.png';
+import hedgehog from '../../images/hero3.png';
+import firstSkill from '../../images/hedgehogSkills/supahpossum-2_18.png';
+import secondSkill from '../../images/hedgehogSkills/supahpossum-2_06.png';
 
-export default class Hero3 extends Component {
+import Button from '../Button.jsx';
+import Article from './Article.jsx';
+
+const text = `Hedgehog. Steep and brutal hedgehog. 
+				He grew up in a dysfunctional area, so he knows how to fight well.
+				And his father was a magician, so the hedgehog also has some abilities`
+
+export default class Hero1 extends Component {
 	constructor(props) {
 		super(props);
+
+		this.state = {
+			goBack : false,
+			goPlay : false
+		}
+	}
+
+	goBack = () => {
+		this.setState({goBack : true });
 	}
 
 	render() {
+		if(this.state.goBack){
+			return <ChooseHero />
+		}
 		return(
-			<div className='choosehero app'>
-				<figure>
-					<img src={hedgehog} className='hedgehog'/>
-				</figure>
+			<div className='aboutHero app'>
+				<Article className='article' class='allign' text={text} firstSkill={firstSkill} secondSkill={secondSkill} hero={hedgehog}/>
+				<section className='buttonWrapper'>
+					<Button type='button' value='Back' className='button' onClick={this.goBack} />
+					<Button type='button' value='Play' className='button'/>
+				</section>
+				
 			</div>
 		);
 	}
