@@ -7,20 +7,13 @@
 }
 
 body {
-    position: relative;
     background: rgb(10, 42, 68);
 }
 
-#app {
+.app {
     display: flex;
     width: 1200px;
     height: 580px;
-    background: #fff;
     margin: 25px auto;
     border-radius: 10px;
-}
-
-.choose-hero img {
-    width: 200px;
-    height: 200px;
 }

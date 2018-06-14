@@ -1,0 +1,16 @@
+.choosehero{
+    background: #fff;
+    display: flex;
+}
+
+figure {
+    height: 130px;
+    margin: auto;
+}
+
+figure img {
+    height: 130px;
+    margin-left: 70px;
+    margin-right: 70px;
+    cursor: pointer;
+}

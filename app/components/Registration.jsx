@@ -25,11 +25,13 @@ export default class Registration extends Component {
 	render() {
 		if (!this.state.hidden) {
 			return (
-				<form onSubmit = {this.handleSubmit}>
-					<input type="text" ref="name" placeholder='Name*' maxLength='16' minLength='3'/><br/>
-					<input type="password" ref="password" placeholder='Password*' maxLength='16' minLength='4'/><br/>
-					<input type="submit" value="Sign in"/>
-				</form>
+				<div className='registration app'>
+					<form onSubmit = {this.handleSubmit}>
+						<input type="text" ref="name" placeholder='Name*' maxLength='16' minLength='3'/><br/>
+						<input type="password" ref="password" placeholder='Password*' maxLength='16' minLength='4'/><br/>
+						<input type="submit" value="Sign in"/>
+					</form>
+				</div>
 			);
 		} else {
 			return (
