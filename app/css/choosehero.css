@@ -27,8 +27,8 @@
 }
 
 .characters img {
-    height: 130px;
-    /* margin: 0 70px; */
+    height: 130px;  
+    /* margin: 0 70px; */  
     cursor: pointer;
 }
 
