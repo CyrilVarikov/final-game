@@ -36,7 +36,7 @@ export default class TheGame extends Component {
                     <HealthBar name={window.PlayerName} id='heroHealth' />
                     <HealthBar name={this.nameMonster} id='monsterHealth' />
                 </section>
-                <Hero img={props.img}/>
+                {/* <Hero img={props.img}/> */}
                 {/* <Boss name='Monster'/> */}
             </div>
         )

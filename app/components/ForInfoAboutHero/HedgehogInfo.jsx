@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ChooseHero from '../ChooseHero.jsx';
 import '../../css/AboutHero.css';
+import TheGame from '../GameComponents/TheGame.jsx';
+
 
 import hedgehog from '../../images/hero3.png';
 import firstSkill from '../../images/hedgehogSkills/supahpossum-2_18.png';
@@ -27,16 +29,26 @@ export default class Hero1 extends Component {
 		this.setState({goBack : true });
 	}
 
+	goPlay = () => {
+		this.setState({goPlay : true });
+	}
+
+
 	render() {
 		if(this.state.goBack){
 			return <ChooseHero />
 		}
+
+		if(this.state.goPlay){
+			return <TheGame img={'s'} />
+		}
+
 		return(
 			<div className='aboutHero app'>
 				<Article className='article' class='allign' text={text} firstSkill={firstSkill} secondSkill={secondSkill} hero={hedgehog}/>
 				<section className='buttonWrapper'>
 					<Button type='button' value='Back' className='button' onClick={this.goBack} />
-					<Button type='button' value='Play' className='button'/>
+					<Button type='button' value='Play' className='button' onClick={this.goPlay}/>
 				</section>
 				
 			</div>
