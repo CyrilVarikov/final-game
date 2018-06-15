@@ -46,15 +46,15 @@ export default class ChooseHero extends Component {
 			<div className='choosehero app'>
 				<Headline caption='Choose your hero'/>
 				<figure className='characters'>
-					<section>
+					<section className='section'>
 						<ImgCaption name='Rambo'/>
 						<img src={rambo} className='rambo' onClick={this.handleHero1}/>
 					</section>
-					<section>
+					<section className='section'>
 						<ImgCaption name='Wizzard'/>
 						<img src={mage} className='wizzard' onClick={this.handleHero2}/>
 					</section>
-					<section>
+					<section className='section'>
 						<ImgCaption name='Hedgehog'/>
 						<img src={hedgehog} className='hedgehog' onClick={this.handleHero3}/>
 					</section>

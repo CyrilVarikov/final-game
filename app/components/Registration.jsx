@@ -17,6 +17,7 @@ export default class Registration extends Component {
 		event.preventDefault();
 		const name = this.refs.name.value;
 		const password = this.refs.password.value;
+		window.PlayerName = name;
 
 		this.setState({
 			hidden: true

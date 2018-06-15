@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ChooseHero from '../ChooseHero.jsx';
 import '../../css/AboutHero.css';
 
-
+import TheGame from '../GameComponents/TheGame.jsx';
 
 import rambo from '../../images/hero1.png';
 import gun from '../../images/ramboWeapons/Gun01.png';
@@ -29,9 +29,17 @@ export default class Hero1 extends Component {
 		this.setState({goBack : true });
 	}
 
+	goPlay = () => {
+		this.setState({goPlay : true });
+	}
+
 	render() {
 		if(this.state.goBack){
 			return <ChooseHero />
+		}
+
+		if(this.state.goPlay){
+			return <TheGame />
 		}
 
 		return(
@@ -39,7 +47,7 @@ export default class Hero1 extends Component {
 				<Article className='article' text={text} firstSkill={gun} secondSkill={sword} hero={rambo}/>
 				<section className='buttonWrapper'>
 					<Button type='button' value='Back' className='button' onClick={this.goBack}/>
-					<Button type='button' value='Play' className='button'/>
+					<Button type='button' value='Play' className='button' onClick={this.goPlay}/>
 				</section>
 				
 			</div>

@@ -10,10 +10,17 @@ body {
     background: rgb(10, 42, 68);
 }
 
+.mainWindow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 720px;
+}
+
 .app {
     display: flex;
     width: 1200px;
     height: 580px;
-    margin: 25px auto;
     border-radius: 10px;
+    background: rgb(255, 255, 255);
 }
