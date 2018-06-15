@@ -3,13 +3,13 @@ import '../../css/TheGame.css';
 
 import HealthBar from './HealthBar.jsx';
 import FillHealthBar from '../../Classes/HealthBar.js';
-
+import NameCreater from '../../Classes/MonsterNameCreater.js';
+import Hero from './Hero.jsx';
 export default class TheGame extends Component {
     constructor(props){
         super(props);
 
-        this.heroId = 'heroHealth';
-        this.monsterId = 'monsterHealth';
+        this.nameMonster = 'Monster';
 
     }
 
@@ -22,17 +22,22 @@ export default class TheGame extends Component {
         monsterBar.fillProgressBar();
     }
 
-    
+    componentWillMount(){
+        const creater = new NameCreater();
+        this.nameMonster = creater.generateName();
+    }
+
+
 
     render(){
         return (
             <div className='app theGame'>
                 <section className='header'>
                     <HealthBar name={window.PlayerName} id='heroHealth' />
-                    <HealthBar name='Monster' id='monsterHealth' />
+                    <HealthBar name={this.nameMonster} id='monsterHealth' />
                 </section>
-                {/* <Hero name={props.name}/>
-                <Boss name='Monster'/> */}
+                <Hero img={props.img}/>
+                {/* <Boss name='Monster'/> */}
             </div>
         )
     }

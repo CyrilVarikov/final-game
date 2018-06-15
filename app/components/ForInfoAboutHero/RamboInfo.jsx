@@ -39,7 +39,7 @@ export default class Hero1 extends Component {
 		}
 
 		if(this.state.goPlay){
-			return <TheGame />
+			return <TheGame img={rambo} />
 		}
 
 		return(
